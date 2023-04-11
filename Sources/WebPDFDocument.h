@@ -40,7 +40,7 @@
 @interface _WebPDFDocumentView : NSView <WebDocumentView>
 {
 	WebDataSource *_dataSource;
-	BOOL _needsLayout;
+	//BOOL _needsLayout;
 }
 
 @end

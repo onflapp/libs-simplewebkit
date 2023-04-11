@@ -23,6 +23,6 @@
 @interface _WebTextDocumentView : NSTextView <WebDocumentView, WebDocumentText>
 {
 	WebDataSource *_dataSource;
-	BOOL _needsLayout;
+	//BOOL _needsLayout;
 }
 @end
