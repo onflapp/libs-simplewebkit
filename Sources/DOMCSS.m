@@ -2282,7 +2282,7 @@
 						return [[[DOMCSSValue alloc] initWithString:[args objectAtIndex:2]] autorelease];	// can specify different units
 					else if([type isEqualToString:@"url"])
 						{ // resolve urls - attr(name url) is different from url(string) which is relative to the CSS path
-						NSString *relPath = [attr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+						NSString *relPath = attr; //SHOULD THE VALUE NOT BE ESCAPED ALREADY??? [attr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 						NSURL *document=[[[[element webFrame] dataSource] response] URL];
 						NSURL *url=[NSURL URLWithString:relPath relativeToURL:document];
                                                 if (!url)
