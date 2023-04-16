@@ -342,7 +342,13 @@ static NSMutableArray *_pageCache;	// global page cache - retains WebDataSource 
 #if 0
 		NSLog(@"url=%@", url);
 		NSLog(@"scheme=%@", scheme);
+		
 #endif
+		if (![_webView canHandleClickOnLink:url]) 
+		  {
+			return NO;
+		  }
+
 		if([scheme isEqualToString:@"http"] || [scheme isEqualToString:@"https"] || [scheme isEqualToString:@"file"])
 			{ // open in (new) window
 			NSString *target=[[tv textStorage] attribute:DOMHTMLAnchorElementTargetWindow atIndex:charIndex effectiveRange:NULL];

@@ -109,6 +109,7 @@ extern NSString *WebViewProgressStartedNotification;
 - (BOOL) canGoForward;
 - (BOOL) canMakeTextLarger;
 - (BOOL) canMakeTextSmaller;
+- (BOOL) canHandleClickOnLink:(NSURL*) url;
 - (void) changeAttributes:(id) sender;
 - (void) changeColor:(id) sender;
 - (void) changeDocumentBackgroundColor:(id) sender;

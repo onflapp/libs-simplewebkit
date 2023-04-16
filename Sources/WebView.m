@@ -492,6 +492,11 @@ static NSArray *_htmlMimeTypes;
 		[self setTextSizeMultiplier:_textSizeMultiplier*(1.0/ENLARGE)];
 }
 
+- (BOOL) canHandleClickOnLink:(NSURL*) url 
+{
+	return YES;
+}
+
 - (NSString *) mediaStyle; { return _mediaStyle; }
 - (void) setMediaStyle:(NSString *) style; { ASSIGN(_mediaStyle, style); }
 - (DOMCSSStyleDeclaration *) typingStyle; { return _typingStyle; }
