@@ -1249,7 +1249,7 @@ NSString *DOMHTMLAnchorElementAnchorName=@"DOMHTMLAnchorElementAnchorName";
 	lastIsInline=([astr length] != 0 && ![[astr string] hasSuffix:@"\n"]);	// did not end with display:block
 	isInline=[node isKindOfClass:[DOMCharacterData class]] || [display isEqualToString:@"inline"];	// plain text is treated as display:inline
 #if 1
-	NSLog(@"<%@ display=%@>: %@ + %@", [node nodeName], display, lastIsInline?@"inline":@"block", isInline?@"inline":@"block");
+	//NSLog(@"<%@ display=%@>: %@ + %@", [node nodeName], display, lastIsInline?@"inline":@"block", isInline?@"inline":@"block");
 #endif
 	// hm. _range is only known for DOMHTMLElements!
 	//	_range.location=[str length];
@@ -1965,7 +1965,7 @@ NSString *DOMHTMLAnchorElementAnchorName=@"DOMHTMLAnchorElementAnchorName";
 				if(height < 0.0)
                                   height=0.0;
 #if 1
-				NSLog(@"height:%@ -> %g", val, height);
+				//NSLog(@"height:%@ -> %g", val, height);
 #endif
 				[p setMinimumLineHeight:height];
 				[p setMaximumLineHeight:height];

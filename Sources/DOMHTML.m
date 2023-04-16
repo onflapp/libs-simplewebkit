@@ -193,7 +193,7 @@
 {
 	WebView *webView=[[self webFrame] webView];
 #if 1
-	NSLog(@"trigger %@", event);
+	//NSLog(@"trigger %@", event);
 #endif
 	if([[webView preferences] isJavaScriptEnabled])
 		{
