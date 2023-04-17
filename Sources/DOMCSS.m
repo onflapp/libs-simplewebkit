@@ -30,6 +30,7 @@
 #import <WebKit/WebResource.h>
 #import <WebKit/DOMHTML.h>
 #import "Private.h"
+#import "FAKENSScanner.h"
 
 @interface DOMStyleSheetList (Private)
 - (void) _addStyleSheet:(DOMStyleSheet *) sheet;
@@ -1671,7 +1672,7 @@
 	if([str isKindOfClass:[NSScanner class]])
 		sc=(NSScanner *) str;	// we already got a NSScanner
 	else
-		sc=[NSScanner scannerWithString:str];
+		sc=[FAKENSScanner scannerWithString:str];
 	[DOMCSSRule _skip:sc];
 	if([sc scanString:@"inherit" intoString:NULL])
 		{
@@ -1982,7 +1983,7 @@
 	if([str isKindOfClass:[NSScanner class]])
 		sc=(NSScanner *) str;	// we already got a NSScanner
 	else
-		sc=[NSScanner scannerWithString:str];
+		sc=[FAKENSScanner scannerWithString:str];
 	[value release];
 	value=nil;
 	[DOMCSSRule _skip:sc];

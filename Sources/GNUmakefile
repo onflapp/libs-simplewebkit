@@ -52,7 +52,8 @@ WebTextDocument.h \
 WebUIDelegate.h \
 WebUndefined.h \
 WebView.h \
-WebXMLDocument.h 
+WebXMLDocument.h \
+FAKENSScanner.h
 
 SimpleWebKit_OBJC_FILES = \
 DOMCore.m \
@@ -81,7 +82,8 @@ WebResource.m \
 WebScriptObject.m \
 WebTextDocument.m \
 WebView.m \
-WebXMLDocument.m
+WebXMLDocument.m \
+FAKENSScanner.m
 
 SimpleWebKit_RESOURCE_FILES = \
 	WebKitIMG.png \
