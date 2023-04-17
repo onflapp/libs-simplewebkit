@@ -1672,7 +1672,7 @@
 	if([str isKindOfClass:[NSScanner class]])
 		sc=(NSScanner *) str;	// we already got a NSScanner
 	else
-		sc=[FAKENSScanner scannerWithString:str];
+		sc=[NSScanner scannerWithString:str];
 	[DOMCSSRule _skip:sc];
 	if([sc scanString:@"inherit" intoString:NULL])
 		{
@@ -1983,7 +1983,7 @@
 	if([str isKindOfClass:[NSScanner class]])
 		sc=(NSScanner *) str;	// we already got a NSScanner
 	else
-		sc=[FAKENSScanner scannerWithString:str];
+		sc=[NSScanner scannerWithString:str];
 	[value release];
 	value=nil;
 	[DOMCSSRule _skip:sc];
